@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation de Moi</title>
+    <title>Mon Site Personnel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,10 +13,16 @@
             color: #333;
         }
         header {
-            background-color: #007BFF;
+            background-image: url('https://via.placeholder.com/1500x400');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
         }
         nav {
             background-color: #0056b3;
@@ -30,20 +36,15 @@
             color: white;
             margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 1.2em;
         }
         nav a:hover {
             text-decoration: underline;
         }
         section {
             padding: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #0056b3;
-            color: white;
-            margin-top: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         .card {
             background: white;
@@ -53,111 +54,118 @@
             margin: 15px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .skills-list, .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .skill, .gallery-item {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            text-align: center;
-            flex: 1 1 calc(33.333% - 30px);
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
         }
         .gallery img {
-            max-width: 100%;
+            width: 100%;
             border-radius: 5px;
         }
-        @media screen and (max-width: 768px) {
-            .skill, .gallery-item {
-                flex: 1 1 calc(50% - 30px);
-            }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
-        @media screen and (max-width: 480px) {
-            .skill, .gallery-item {
-                flex: 1 1 100%;
-            }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ddd;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 10px 20px;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-item .date {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #0056b3;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon site personnel</h1>
-        <p>Étudiant en droit passionné de sport et de communication</p>
+        <h1>Mon Univers</h1>
+        <p>Étudiant en droit passionné de sport, de culture, et d’innovation</p>
     </header>
     <nav>
+        <a href="#apropos">À propos</a>
         <a href="#parcours">Parcours</a>
-        <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
-        <a href="#passions">Passions</a>
         <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
     </nav>
-    <section id="parcours">
-        <h2>Mon Parcours</h2>
+    <section id="apropos">
+        <h2>À propos de moi</h2>
         <div class="card">
-            <h3>Formation</h3>
-            <p>Étudiant en droit, spécialisé en communication et marketing sportif, avec une passion pour le développement durable et les initiatives innovantes dans le sport.</p>
-        </div>
-        <div class="card">
-            <h3>Expérience Professionnelle</h3>
-            <ul>
-                <li>Stage chez Intersport : découverte de la gestion commerciale.</li>
-                <li>Alternance chez On Air : développement de stratégies de communication innovantes.</li>
-            </ul>
+            <p>Je suis un étudiant en droit passionné par le sport et la communication. Mon objectif est de promouvoir les bienfaits du sport à travers des projets innovants et de créer des campagnes qui connectent les gens autour de valeurs communes.</p>
         </div>
     </section>
-    <section id="competences">
-        <h2>Mes Compétences</h2>
-        <div class="skills-list">
-            <div class="skill">
-                <h3>Droit</h3>
-                <p>Connaissances approfondies en droit des affaires et droit du sport.</p>
+    <section id="parcours">
+        <h2>Mon Parcours</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">2024</span>
+                <p>Actuellement en alternance chez On Air pour deux ans.</p>
             </div>
-            <div class="skill">
-                <h3>Communication</h3>
-                <p>Création de plans de communication efficaces, spécialisés dans le digital.</p>
+            <div class="timeline-item">
+                <span class="date">2023</span>
+                <p>Stage chez Intersport pour découvrir le marketing sportif.</p>
             </div>
-            <div class="skill">
-                <h3>Organisation</h3>
-                <p>Capacité à gérer des projets complexes de manière efficace.</p>
+            <div class="timeline-item">
+                <span class="date">2022</span>
+                <p>Participation à un tournoi de tennis marquant une étape importante dans ma passion pour le sport.</p>
             </div>
         </div>
     </section>
     <section id="projets">
         <h2>Mes Projets</h2>
         <div class="card">
-            <h3>Campagne de Communication Sportive</h3>
-            <p>Lancement de projets visant à promouvoir les bienfaits du sport en entreprise, notamment via des activités inclusives comme le basket en fauteuil.</p>
+            <h3>Projet 1 : Sport en entreprise</h3>
+            <p>Organisation d'initiations au basket-ball en fauteuil roulant pour renforcer la cohésion d'équipe.</p>
         </div>
         <div class="card">
-            <h3>Partenariats</h3>
-            <p>Travail sur des initiatives pour renforcer les partenariats entre entreprises et associations sportives.</p>
-        </div>
-    </section>
-    <section id="passions">
-        <h2>Mes Passions</h2>
-        <div class="card">
-            <h3>Le Sport</h3>
-            <p>Fan de football et joueur de tennis, je crois en la puissance du sport pour rapprocher les gens.</p>
+            <h3>Projet 2 : Communication digitale</h3>
+            <p>Création de campagnes pour fidéliser les investisseurs et développer des partenariats sportifs.</p>
         </div>
         <div class="card">
-            <h3>Voyages</h3>
-            <p>Découvrir de nouvelles cultures et lieux enrichit ma vision du monde.</p>
+            <h3>Projet 3 : Culture romaine</h3>
+            <p>Plan de communication sur les monuments historiques pour une meilleure découverte culturelle.</p>
         </div>
     </section>
     <section id="galerie">
         <h2>Galerie</h2>
         <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300" alt="Photo de sport">
-                <p>Participation à un tournoi de tennis.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300" alt="Voyage">
-                <p>Voyage à Rome pour un séminaire étudiant.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/300
+            <img src="https://via.placeholder.com/200" alt="Tournoi de tennis">
+            <img src="https://via.placeholder.com/200" alt="Conférence">
+            <img src="https://via.placeholder.com/200" alt="Monuments de Rome">
+            <img src="https://via.placeholder.com/200" alt="Campagne de communication">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:tonemail@example.com">tonemail@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/tonprofil" target="_blank">Ton Profil LinkedIn</a></p>
+    </section>
+    <footer>
+        &copy; 2024 Mon Site Personnel - Tous droits réservés
+    </footer>
+</body>
+</html>
