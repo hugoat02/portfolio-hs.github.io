@@ -1,53 +1,66 @@
-/* Style optimisé pour une apparence moderne et professionnelle */
+/* Style CSS premium pour un design moderne, interactif et professionnel */
 
-body {
-    font-family: 'Roboto', Arial, sans-serif;
+/* Base globale */
+* {
     margin: 0;
     padding: 0;
-    background-color: #eef2f7;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(to right, #eaf2fc, #eef2f7);
     color: #333;
     line-height: 1.6;
 }
 
 /* En-tête */
 header {
-    background-image: linear-gradient(to right, rgba(0, 87, 183, 0.8), rgba(0, 87, 183, 0.6)), url('https://via.placeholder.com/1500x400');
+    background-image: linear-gradient(to bottom, rgba(0, 87, 183, 0.9), rgba(0, 87, 183, 0.7)), url('https://via.placeholder.com/1500x400');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 120px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 150px 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 3.5em;
-    margin: 0;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-size: 4em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1.5s ease;
 }
 
 header p {
-    font-size: 1.6em;
-    margin-top: 10px;
+    font-size: 1.8em;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease;
 }
 
 /* Navigation */
 nav {
     background-color: #0057b7;
-    padding: 15px;
-    text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+nav:hover {
+    background-color: #004497;
 }
 
 nav a {
     color: white;
     margin: 0 20px;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
+    text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -62,33 +75,36 @@ section {
     max-width: 1200px;
     margin: auto;
     background: white;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 1s ease;
 }
 
 section h2 {
-    font-size: 2.8em;
-    margin-bottom: 25px;
+    font-size: 3em;
+    margin-bottom: 30px;
     color: #0057b7;
-    border-bottom: 3px solid #ddd;
+    border-bottom: 4px solid #ddd;
     padding-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .card {
-    background: #ffffff;
+    background: #f9faff;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
+    border-radius: 15px;
+    padding: 30px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: #eef4ff;
 }
 
 /* Chronologie */
@@ -105,24 +121,25 @@ section h2 {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 4px;
-    background: #0057b7;
+    width: 5px;
+    background: linear-gradient(to bottom, #0057b7, #ffdd57);
     transform: translateX(-50%);
 }
 
 .timeline-item {
     position: relative;
-    width: 50%;
+    width: 45%;
     padding: 25px;
-    margin: 30px 0;
-    border-radius: 10px;
-    background: #f7faff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    margin: 40px 0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .timeline-item:hover {
-    background-color: #eaf2fc;
+    background-color: #eef4ff;
+    transform: translateY(-10px);
 }
 
 .timeline-item:nth-child(odd) {
@@ -139,35 +156,69 @@ section h2 {
     font-weight: bold;
     color: #0057b7;
     margin-bottom: 15px;
+    font-size: 1.2em;
 }
 
 /* Pied de page */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #0057b7;
+    padding: 25px;
+    background: linear-gradient(to right, #0057b7, #004497);
     color: white;
     font-size: 1em;
-    position: relative;
+    text-transform: uppercase;
 }
 
 footer a {
     color: #ffdd57;
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Responsivité */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.8em;
+        font-size: 3em;
     }
 
     header p {
-        font-size: 1.4em;
+        font-size: 1.5em;
     }
 
     .timeline-item {
