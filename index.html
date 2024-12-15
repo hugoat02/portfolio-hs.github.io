@@ -11,6 +11,117 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: #0073e6;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        .cta a {
+            display: inline-block;
+            margin: 1rem 0.5rem;
+            padding: 0.8rem 1.5rem;
+            color: white;
+            background: #005bb5;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .cta a:hover {
+            background: #003d80;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            color: white;
+        }
+        nav a {
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #0073e6;
+        }
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            color: #005bb5;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+        .timeline {
+            border-left: 2px solid #0073e6;
+            padding-left: 1rem;
+        }
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item span {
+            font-weight: bold;
+            color: #005bb5;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #0073e6;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: #005bb5;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,7 +137,6 @@
         <a href="#parcours">Parcours</a>
         <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
-        <a href="#galerie">Galerie</a>
         <a href="#contact">Contact</a>
     </nav>
     <section id="apropos">
@@ -76,60 +186,17 @@
         <h2>Compétences</h2>
         <div class="card">
             <ul>
-                <li>Création de contenu : photos et vidéos promotionnelles</li>
+                <li>Création de contenu : textes promotionnels et présentations</li>
                 <li>Gestion des réseaux sociaux et campagnes digitales</li>
                 <li>Fidélisation et conseil client</li>
                 <li>Mise en place d’opérations commerciales et merchandising</li>
                 <li>Outils : Word, Excel, PowerPoint, Keynote</li>
                 <li>Langues : Anglais (B2), Espagnol (B1), Italien (A1)</li>
-            </ul>
+                 </ul>
         </div>
     </section>
     <section id="projets">
         <h2>Projets</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Promotion de l'inclusion sportive</h3>
-                <p>Organisation d’événements de basket-ball en fauteuil roulant dans les entreprises pour sensibiliser à l’inclusion et renforcer la cohésion d’équipe.</p>
-            </div>
-            <div class="card">
-                <h3>Campagnes marketing locales</h3>
-                <p>Stratégies digitales pour les clubs sportifs locaux afin d’augmenter leur visibilité et attractivité.</p>
-            </div>
-            <div class="card">
-                <h3>Commerce durable</h3>
-                <p>Planification d'une stratégie de vente pour des équipements sportifs écoresponsables destinés aux jeunes athlètes.</p>
-            </div>
-        </div>
-    </section>
-    <section id="galerie">
-        <h2>Galerie</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/300" alt="Projet 1">
-            <img src="https://via.placeholder.com/300" alt="Projet 2">
-            <img src="https://via.placeholder.com/300" alt="Projet 3">
-            <img src="https://via.placeholder.com/300" alt="Événement">
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-form">
-            <form action="#" method="POST">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 Hugo Soullard - Tous droits réservés | <a href="#">Mentions légales</a></p>
-    </footer>
-</body>
-</html>
+        <div class="card">
+            <h3>Projection dans le futur</h3>
+            <p>Devenir directeur marketing dans un club de football étranger
